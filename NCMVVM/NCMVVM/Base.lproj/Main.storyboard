@@ -38,6 +38,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="idTextField" destination="52W-t4-TBY" id="FbN-Cq-dBt"/>
+                        <outlet property="passwordTextField" destination="FYE-cn-su9" id="W88-if-gSU"/>
+                        <outlet property="validationLabel" destination="rC9-6V-MhR" id="4y9-h8-rhA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
