@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+enum Result<T> {
+    case success(T)
+    case failure(Error)
+}
+
+protocol ModelProtocol {
+    func validate(idText: String?, passwordText: String?) -> Result<Void>
+}
