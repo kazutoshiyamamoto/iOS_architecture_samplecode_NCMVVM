@@ -13,6 +13,12 @@ enum Result<T> {
     case failure(Error)
 }
 
+enum ModelError: Error {
+    case invalidId
+    case invalidPassword
+    case invalidIdAndPassword
+}
+
 protocol ModelProtocol {
     func validate(idText: String?, passwordText: String?) -> Result<Void>
 }
