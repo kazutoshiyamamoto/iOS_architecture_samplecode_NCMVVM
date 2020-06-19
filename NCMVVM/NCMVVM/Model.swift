@@ -16,3 +16,7 @@ enum Result<T> {
 protocol ModelProtocol {
     func validate(idText: String?, passwordText: String?) -> Result<Void>
 }
+
+final class Model: ModelProtocol {
+    
+}
