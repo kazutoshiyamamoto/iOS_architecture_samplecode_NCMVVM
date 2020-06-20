@@ -12,5 +12,11 @@ final class ViewModel {
     let changeText = Notification.Name("changeText")
     let changeColor = Notification.Name("changeColor")
     
+    private let notificationCenter: NotificationCenter
+    private let model: ModelProtocol
     
+    init (notificationCenter: NotificationCenter, model: ModelProtocol = Model()) {
+        self.notificationCenter = notificationCenter
+        self.model = model
+    }
 }
