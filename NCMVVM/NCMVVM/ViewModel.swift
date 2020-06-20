@@ -6,4 +6,11 @@
 //  Copyright © 2020 Swift-beginners. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class ViewModel {
+    let changeText = Notification.Name("changeText")
+    let changeColor = Notification.Name("changeColor")
+    
+    
+}
