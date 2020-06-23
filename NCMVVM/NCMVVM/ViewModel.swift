@@ -23,6 +23,16 @@ final class ViewModel {
     func idPasswordChanged(id: String?, password: String?) {
         let result = model.validate(idText: id, passwordText: password)
         
+        switch result {
+        case .success:
+            notificationCenter.post(name: changeText, object: "OK!")
+            notificationCenter.post(name: changeColor, object: UIColor.green)
+        case .failure(let error as ModelError):
+            notificationCenter.post(name: changeText, object: error.errorText)
+            notificationCenter.post(name: changeColor, object: UIColor.red)
+        case _:
+            fatalError("Unexpected pattern.")
+        }
     }
 }
 
