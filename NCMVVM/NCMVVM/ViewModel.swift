@@ -19,6 +19,13 @@ final class ViewModel {
         self.notificationCenter = notificationCenter
         self.model = model
     }
+    
+    func idPasswordChanged(id: String?, password: String?) {
+        let result = model.validate(idText: id, passwordText: password)
+        
+    }
+}
+
 extension ModelError {
     fileprivate var errorText: String {
         switch self {
