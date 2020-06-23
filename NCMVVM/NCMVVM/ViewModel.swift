@@ -19,4 +19,15 @@ final class ViewModel {
         self.notificationCenter = notificationCenter
         self.model = model
     }
+extension ModelError {
+    fileprivate var errorText: String {
+        switch self {
+        case .invalidIdAndPassword:
+            return "IDとPasswordが未入力です。"
+        case .invalidId:
+            return "IDが未入力です。"
+        case .invalidPassword:
+            return "Passwordが未入力です。"
+        }
+    }
 }
