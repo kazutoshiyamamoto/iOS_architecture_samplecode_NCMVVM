@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var validationLabel: UILabel!
@@ -20,8 +20,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        idTextField.addTarget(
+            self,
+            action: #selector(textFieldEditingChanged),
+            for: .editingChanged)
+        passwordTextField.addTarget(
+            self,
+            action: #selector(textFieldEditingChanged),
+            for: .editingChanged)
     }
+}
 
-
+extension ViewController {
+    @objc func textFieldEditingChanged(sender: UITextField) {
+        viewModel.idPasswordChanged(id: idTextField.text, password: passwordTextField.text)
+    }
 }
 
