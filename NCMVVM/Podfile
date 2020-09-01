@@ -6,5 +6,6 @@ target 'NCMVVM' do
   use_frameworks!
 
   # Pods for NCMVVM
+  pod 'SwiftLint'
 
 end

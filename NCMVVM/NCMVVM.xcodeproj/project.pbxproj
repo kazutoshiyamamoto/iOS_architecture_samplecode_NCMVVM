@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FA0664ECEF651F6C9B6253A /* Pods_NCMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F6C4591F9E793315232D4C /* Pods_NCMVVM.framework */; };
 		FD886816249CF6E30013BD57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD886815249CF6E30013BD57 /* AppDelegate.swift */; };
 		FD886818249CF6E30013BD57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD886817249CF6E30013BD57 /* SceneDelegate.swift */; };
 		FD88681A249CF6E30013BD57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD886819249CF6E30013BD57 /* ViewController.swift */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4784DE7D3552F0ABDB9E06A7 /* Pods-NCMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCMVVM.debug.xcconfig"; path = "Target Support Files/Pods-NCMVVM/Pods-NCMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		501E1C8B34A0219B725E7970 /* Pods-NCMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCMVVM.release.xcconfig"; path = "Target Support Files/Pods-NCMVVM/Pods-NCMVVM.release.xcconfig"; sourceTree = "<group>"; };
+		A0F6C4591F9E793315232D4C /* Pods_NCMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NCMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD886812249CF6E30013BD57 /* NCMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NCMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD886815249CF6E30013BD57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD886817249CF6E30013BD57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA0664ECEF651F6C9B6253A /* Pods_NCMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76E8E1EC000011EF624CA793 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0F6C4591F9E793315232D4C /* Pods_NCMVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF018CDF0FFA5EA64346460E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4784DE7D3552F0ABDB9E06A7 /* Pods-NCMVVM.debug.xcconfig */,
+				501E1C8B34A0219B725E7970 /* Pods-NCMVVM.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FD886809249CF6E30013BD57 = {
 			isa = PBXGroup;
 			children = (
 				FD886814249CF6E30013BD57 /* NCMVVM */,
 				FD886813249CF6E30013BD57 /* Products */,
+				EF018CDF0FFA5EA64346460E /* Pods */,
+				76E8E1EC000011EF624CA793 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +105,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD886826249CF6E60013BD57 /* Build configuration list for PBXNativeTarget "NCMVVM" */;
 			buildPhases = (
+				833C7D968E866C3A4DFE14E9 /* [CP] Check Pods Manifest.lock */,
 				FD88680E249CF6E30013BD57 /* Sources */,
 				FD88680F249CF6E30013BD57 /* Frameworks */,
 				FD886810249CF6E30013BD57 /* Resources */,
@@ -138,6 +164,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		833C7D968E866C3A4DFE14E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NCMVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD88680E249CF6E30013BD57 /* Sources */ = {
@@ -290,6 +341,7 @@
 		};
 		FD886827249CF6E60013BD57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4784DE7D3552F0ABDB9E06A7 /* Pods-NCMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +360,7 @@
 		};
 		FD886828249CF6E60013BD57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 501E1C8B34A0219B725E7970 /* Pods-NCMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
